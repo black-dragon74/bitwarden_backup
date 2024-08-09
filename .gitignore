@@ -6,6 +6,7 @@ __pycache__/
 build/
 dist/
 
-app.env
+*.env
+!sample.env
 *.json
 *.crypt
