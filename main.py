@@ -53,6 +53,10 @@ class BW:
 
         self._check_bw_binary()
 
+        # If logged out, error
+        if self.status() == BWStatus.UNAUTHENTICATED:
+            raise Exception("Not logged in, please login first")
+
     @staticmethod
     def _check_bw_binary():
         # check if bw binary is installed
